@@ -20,7 +20,7 @@ export class MessagesListComponent {
   // private cdRef = inject(ChangeDetectorRef);
   // private destroyRef = inject (DestroyRef);
 
-  // // messages = this.messagesService.allMessages;
+ //  messages = this.messagesService.allMessages;
   // // get messages() {
   // //   return this.messagesService.allMessages;
   // // }
@@ -37,7 +37,8 @@ export class MessagesListComponent {
   // }
 
   private messageService = inject(MessagesService);
-  messages$ = this.messagesService.messages$;
+  messages = this.messagesService.allMessages;
+  //messages$ = this.messagesService.messages$;
 
   get debugOutput() {
     console.log('[MessagesList] "debugOutput" binding re-evaluated.');
